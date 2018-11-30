@@ -22,8 +22,8 @@ public class DicewareController {
     return generator.generate(length);
   }
 
-  @GetMapping(path = "/diceware", produces ="application/json")
-  public String[] getJson(@RequestParam(name = "length", defaultValue = "6")int length) {
+  @GetMapping(path = "/diceware", produces = "application/json")
+  public String[] getJson(@RequestParam(name = "length", defaultValue = "6") int length) {
     return get(length).split("\\s+");
   }
 }
